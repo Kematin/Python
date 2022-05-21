@@ -82,5 +82,13 @@ def lambda_function():
     result = lambda a, b: a + b 
     print(f'result = {result(a, b)}')
 
+    def nums_manipulation(a, b, operation):
+        print(f'result = {operation(a, b):.2f}')
+
+    nums_manipulation(a, b, lambda a, b: a - b) 
+    nums_manipulation(a, b, lambda a, b: a * b) 
+    nums_manipulation(a, b, lambda a, b: a ** b) 
+    nums_manipulation(a, b, lambda a, b: a / b) 
+
 
 lambda_function()

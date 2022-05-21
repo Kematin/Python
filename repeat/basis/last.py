@@ -69,4 +69,26 @@ def global_local():
 
 # closure
 def closure():
-    pass    
+    
+    def clouse(n):
+
+        def double():
+            nonlocal n
+            n *= 2
+            print(n)
+
+        return double
+
+    a = clouse(3) # a() = double() 
+    a() # 6
+    a() # 12
+    a() # 24
+
+    def multiply(n):
+        return lambda m: n * m
+
+    fn = multiply(4)
+    print(fn(5)) # 20
+    print(fn(10)) # 40
+
+closure()
