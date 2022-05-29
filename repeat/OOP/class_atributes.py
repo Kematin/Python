@@ -84,4 +84,17 @@ def types_3():
 
 # Static method
 class Person:
-    pass
+    __type = 'Class Person' # Private
+
+    @staticmethod
+    def print_type():
+        print(Person.__type)
+
+
+def types_4():
+    Person.print_type() # Addressing through a class
+
+    mark = Person()
+    mark.print_type() # Addressing through a object
+
+types_4()
