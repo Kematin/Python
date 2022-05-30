@@ -33,7 +33,6 @@ class Finance:
 def start():
     calculate = Finance()
     calculate.main()
-    # cool commentary
 
 
 if __name__ == '__main__':
