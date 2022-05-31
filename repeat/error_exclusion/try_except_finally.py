@@ -45,8 +45,12 @@ def except_zero_error():
         num_2 = int(input('Number 2: '))
         num = calculate(num_1, num_2)
         print(f'{num_1} / {num_2} = {num}')
-    except ZeroDivisionError:
-        print('num 2 cant to be 0!')
+
+    except (ZeroDivisionError, ValueError) as v:
+        print(f'Error: {v}')
+    except:
+        print('error')
+
     finally:
         print('Case try end work')
 
