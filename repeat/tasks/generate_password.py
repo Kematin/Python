@@ -25,4 +25,3 @@ def fast_generate_for_me():
 
 if __name__ == '__main__':
     fast_generate_for_me()
-
