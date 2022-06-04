@@ -27,6 +27,8 @@ def dictionary():
     users = dict(users_list)
     print(users) # {'Mark': '+951358953', ...}
 
+
+    #check key in dictionary
     check_keys = 'Tom', 'Bob'
     for key in check_keys:
         if key in users:
@@ -44,9 +46,82 @@ def dictionary():
     print(users['Bob'])
 
     # get(key, default)
+    phone_bill = users.get('Bill', 'Undefined')
+    phone_larry = users.get('Larry', 'Undefined')
+    print(f'Bill: {phone_bill}\nLarry: {phone_larry}')
+
+
+
+def for_in_dict():
+    elements = {
+        'Name': 'Bob',
+        'Phone': '+6953135',
+        'Company': 'Microsoft',
+    }
+    for key, value in elements.items():
+        print(f'{key}: {value}') 
+
+    for key in elements.keys():
+        print(key)
+
+    for value in elements.values():
+        print(value)
     
 
-dictionary()
+def complex_dict():
+    users = {
+
+        'Tom': {
+            'email': 'tom_work@gmail.com',
+            'age': 34
+        },
+
+        'Bob': {
+            'email': 'bob@gmail.com',
+            'age': 13
+        }
+
+    }
+    old_email = users['Bob']['email']
+    new_email = 'work_bob@rumbler.com'
+    users['Bob']['email'] = new_email
+    print(users['Bob']) # {email: work_bob@rumbler.com, ...}
+
+    for user, info in users.items():
+        print(user)
+        for i in info:
+            print(f'{i}: {info[i]}')
+        print('\n')
+
+
+def del_from_dict():
+    values = {
+        1: 53.23,
+        2: True,
+        3: 'Name'
+    }
+    check_keys = 2, '3'
+    for key in check_keys:
+        if key in values:
+            del values[key]
+            print(f'Key: {key} was removed from dict')
+        else:
+            print(f'Key: {key} not in dict')
+
+    values[4] = 1000
+    value_1 = values.pop(1, 'Undefined')
+    value_2 = values.pop(5, 'Undefined')
+    print(f'value 1 was delete from dict and = {value_1}',
+            f'\nvalue 2 was delete from dict and = {value_2}')
+    # print(values[1]) KeyError
+
+    values_2 = values.copy() # {3: Name, 4: 1000}
+    values_2.clear() # {}
+    values_2[1] = 5000
+
+    values.update(values_2)
+    print(values) # {3: Name, 4: 1000, 1: 5000}
+
 
 
 class Person:
@@ -74,4 +149,7 @@ def for_person():
         person = Person(users[key][0])
         person.set_age(users[key][1])
         print(person)
-        
+
+
+if __name__ == '__main__':
+    complex_dict()
