@@ -5,15 +5,21 @@ letters = list(string.ascii_letters)
 digits = [str(i) for i in range(10)]
 punctuation = list(string.punctuation)
 
-def get_part(part, how_much):
-    pass
+class GeneratePassword:
 
-def main():
-    add_letters = input('Add letters in password? (+ - yes)')
-    add_nums = input('Add nums in password? (+ - yes)')
-    add_punct = input('Add punctuation in password? (+ - yes)')
+    def get_part(self, part, how_much):
+        pass
+
+    def main(self):
+        add_letters = input('Add letters in password? (+ - yes)')
+        add_nums = input('Add nums in password? (+ - yes)')
+        add_punct = input('Add punctuation in password? (+ - yes)')
+
+
+def start():
+    generate = GeneratePassword
+    generate.main()
     
-
 def fast_generate_for_me():
     all_in_one = letters + digits + punctuation
     without_punctuation = letters + digits
@@ -23,5 +29,7 @@ def fast_generate_for_me():
 
     print(f'{result_1}\n{result_2}')
 
+
 if __name__ == '__main__':
     fast_generate_for_me()
+    # start

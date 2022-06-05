@@ -58,7 +58,7 @@ def can_construct(rans: str, mag: str) -> bool:
 # print(can_construct('aa', 'ab'))
 
 class Solution:
-    def fizzBuzz(self, n: int) -> list[str]:
+    def fizzBuzz(self, n) -> list:
         result = list()
         for i in range(1, n + 1):
             if i % (15):
@@ -70,7 +70,7 @@ class Solution:
             else: result.append(str(i))
         return result
 
-    def another_solution(self, n: int) -> list[str]: # yield
+    def another_solution(self, n: int) -> list: # yield
         for i in range(1,n+1):
             to_yield = ''
             
@@ -83,9 +83,25 @@ class Solution:
 # sol = Solution()
 # print(sol.another_solution(15))
 
-def max_value(acc: list[list[int]]) -> int:
+def max_value(acc: list) -> int:
     result = [sum(el) for el in acc]
     return max(result)
 
-accounts = [[2,8,7],[7,1,3],[1,9,5]]
-print(max_value(accounts))
+# accounts = [[2,8,7],[7,1,3],[1,9,5]]
+# print(max_value(accounts))
+
+
+class Solution:
+    def addTwoNumbers(self, l1: list, l2: list) -> list:
+        nums_1 = int(''.join([str(i) for i in l1[::-1]]))
+        nums_2 = int(''.join([str(i) for i in l2[::-1]]))
+        sum_nums = str(nums_1 + nums_2)
+        result = [int(i) for i in sum_nums[::-1]]
+        return result
+
+sol = Solution()
+l1, l2 = [9,9,9,9,9,9,9], [9,9,9,9]
+result = sol.addTwoNumbers(l1, l2)
+print(result)
+        
+        
