@@ -46,6 +46,7 @@ data: *time---day---month*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 email: *email*
 email password: *password*
+secret word: *word*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ```
 
@@ -81,6 +82,7 @@ SDA recovery code: *R12345*
             <th>Password</th>
             <th>Email</th>
             <th>Email password</th>
+            <th>Secret word</th>
             <th>Phone</th>
             <th>SDA</th>
         </tr>
@@ -92,6 +94,7 @@ SDA recovery code: *R12345*
             <td>*password*</td>
             <td>*email*</td>
             <td>*email password*</td>
+            <td>*email secret word*<td>
             <td>*0123456789*</td>
             <td>*R12345*</td>
         </tr>

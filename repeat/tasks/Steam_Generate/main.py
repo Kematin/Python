@@ -8,7 +8,7 @@ from selenium.webdriver.common.by import By
 
 # Generate
 from generate_email import GenerateEmail as GEm
-from generate_password import GeneratePassword as GPa
+from generate_data import GenerateData as GDa
 from generate_phone import GeneratePhone as GPh
 from generate_steam import GenerateSteam as GSt
 
