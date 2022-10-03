@@ -24,8 +24,8 @@ def fast_generate_for_me():
     all_in_one = letters + digits + punctuation
     without_punctuation = letters + digits
 
-    result_1 = ''.join(choice(all_in_one) for _ in range(40))
-    result_2 = ''.join(choice(without_punctuation) for _ in range(40))
+    result_1 = ''.join(choice(all_in_one) for _ in range(20))
+    result_2 = ''.join(choice(without_punctuation) for _ in range(20))
 
     print(f'{result_1}\n{result_2}')
 
